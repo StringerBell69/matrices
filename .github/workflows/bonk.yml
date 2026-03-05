@@ -33,7 +33,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           model: opencode/claude-opus-4-6-fake
-          fallback_model: openai/gpt-4o-mini
+          fallback_model: openai/gpt-5
           oidc_base_url: https://ask-bonk.dspro699.workers.dev/auth
           mentions: "/bonk,@ask-bonk"
           permissions: write
