@@ -32,6 +32,6 @@ env:
 ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 with:
 model: "anthropic/claude-3-7-sonnet-20250219"
-          fallback_model: "openai/gpt-4o"
+fallback_model: "openai/gpt-4o"
 mentions: "/bonk,@ask-bonk"
 permissions: write
