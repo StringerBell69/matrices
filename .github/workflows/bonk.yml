@@ -27,12 +27,11 @@ with:
 fetch-depth: 1
 
 - name: Run Bonk
-uses: ask-bonk/ask-bonk/github@main
+uses: StringerBell69/ask-bonk/github@main
 env:
-OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 with:
-model: "opencode/claude-opus-4-5"
-        fallback_model: "gpt-4o-mini-2024-07-18"
-        oidc_base_url: "https://ask-bonk.dspro699.workers.dev/auth"
+model: "anthropic/claude-3-7-sonnet-20250219"
+          fallback_model: "openai/gpt-4o"
 mentions: "/bonk,@ask-bonk"
 permissions: write
