@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,10 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-      >
+      <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+
+        {/* Script Joyride */}
+        <Script
+          src="http://localhost:5174/widget.js"
+          data-project-id="cmr3ib76n0004dsl2x6qe74i9"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
